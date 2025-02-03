@@ -9,16 +9,17 @@ package com.wipro.java.oops;
  * POJO (Plain Old Java Object)
  */
 public class Employee {
-	private String employeeId; //employee ID
+	private int employeeId; //employee ID
 	private String name; // employee Name
 	private int age; // employee Age
 	private float salary; // Salary
+	private boolean isTaxApplicable;
 	
-	public String getEmployeeId() {  // Getter is used to get the Employee ID from the private 
+	public int getEmployeeId() {  // Getter is used to get the Employee ID from the private 
 		return employeeId;
 	}
 
-	public void setEmployeeId(String employeeId) { //Setter allows to modify the private field of employeeId
+	public void setEmployeeId(int employeeId) { //Setter allows to modify the private field of employeeId
 		this.employeeId = employeeId;
 	}
 
@@ -46,8 +47,10 @@ public class Employee {
 		this.salary = salary;
 	}
 
-	public Employee() {
-		// TODO Auto-generated constructor stub
+	@Override
+	public String toString() {
+		return "Employee [employeeId=" + employeeId + ", name=" + name + ", age=" + age + ", salary=" + salary
+				+ ", isTaxApplicable=" + isTaxApplicable + "]";
 	}
 
 
