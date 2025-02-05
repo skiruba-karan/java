@@ -25,9 +25,9 @@ public class MapLImplementation {
 		for(Map.Entry<Integer,String> entry:map.entrySet()) {
 			System.out.println(entry.getKey()+":"+entry.getValue());
 		}
-		
+//		removes the key 
 		map.remove(2);
-		
+//		Iterating over the map after removal of key 2
 		System.out.println("\nMap after removal of key 2:");
 		for(Map.Entry<Integer,String> entry : map.entrySet()) {
 			System.out.println(entry.getKey()+":"+entry.getValue());
