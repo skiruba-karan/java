@@ -8,16 +8,19 @@ public class StreamApi {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<String> list = Arrays.asList("BMW","Mercedes","Rolls-Royce");
-		List<String> stream = list.stream(). //Object to Stream
-				filter(name->name.startsWith("R")). //Filters the name starting with R
-				collect(Collectors.toList()); // It is then collected as List
-		System.out.println(stream);
-		
-		List<String> stream1 = list.stream(). //Object to Stream
-				map(String::toUpperCase).// Changes to UpperCase
-				collect(Collectors.toList()); // It is then collected as List
-		System.out.println(stream1);
+		List<Integer> numbers = Arrays.asList(7, 8, 14, 12,9);
+		List<Integer> sortedNumbers = numbers.stream().sorted().collect(Collectors.toList());
+
+		System.out.println(sortedNumbers);
+
+		List<Integer> numbers1 = Arrays.asList(1, 2, 7, 5, 3);
+		int min = numbers1.stream().min(Integer::compare).get();
+		int max = numbers1.stream().max(Integer::compare).get();
+
+		System.out.println(numbers1);
+		System.out.println(min);
+		System.out.println(max);
+
 				
 		
 		}
