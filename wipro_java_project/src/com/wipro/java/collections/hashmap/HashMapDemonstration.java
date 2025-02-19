@@ -3,7 +3,7 @@ package com.wipro.java.collections.hashmap;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-class HashMapImplementation<K, V> {
+class HashMapDemonstration<K, V> {
     private static class Entry<K, V> {
         K key;
         V value;
@@ -18,7 +18,7 @@ class HashMapImplementation<K, V> {
     private LinkedList<Entry<K, V>>[] buckets;
     
     @SuppressWarnings("unchecked")
-    public HashMapImplementation() {
+    public HashMapDemonstration() {
         buckets = new LinkedList[DEFAULT_CAPACITY];
     }
 
